@@ -1,0 +1,48 @@
+<body style="color:pink;">
+
+  <div class="container">
+
+    <header background="color:pink;">
+      <img src="http://gifs.eco.br/wp-content/uploads/2018/01/Lindos-Gifs-de-Flores-Baixar.gif"/>
+
+ <p>Taline Website {{#if currentUser}}- Mensagens({{incompleteCount}}){{/if}}</p>
+
+      <label class="hide-completed">
+
+      <input type="checkbox" />
+
+        Ocultar mensagens
+
+      </label>
+
+      {{> loginButtons}}
+
+      {{#if currentUser}}
+
+      <form class="new-task">
+ <input  style="color:pink" type="text" name="text" placeholder="Type to add new tasks" />
+ <p></p>
+
+      </form>
+
+      {{/if}}
+
+    </header>
+
+
+
+
+    <ul style="color:purple">
+
+      {{#each tasks}}
+
+        {{> task}}
+
+      {{/each}}
+
+    </ul>
+
+  </div>
+
+
+</body>
